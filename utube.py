@@ -1,8 +1,10 @@
 from tkinter import *
 from pytube import YouTube
 
+#initiate tkinter
 window = Tk()
 
+#initiate main form
 window.geometry('500x300')
 
 window.resizable(0,0)
@@ -25,7 +27,7 @@ def downloader():
     video.download()
     Label(window, text="Video is downloaded and save in the project's folder!!!", font=("arial", 15)).place(x=20, y=210)
 
-#
+#Download button
 Button(window, text="Download", font='arial 15 bold', bg='yellow', padx=2, command=downloader).place(x=180, y=150)
 
 window.mainloop()
